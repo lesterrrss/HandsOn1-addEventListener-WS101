@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals-Activity-1</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            background-color: #fff;
+            color: #3498db;
+            font-size: 18px;
+            padding: 15px 30px;
+            width: 200px; /* Set a fixed width for all buttons */
+            margin: 10px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulseButton 3s infinite alternate;
+        }
+
+        @keyframes pulseButton {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        button:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h1>JavaScript <span style="color: #FFD700;">addEventListener()</span> hands-on</h1>
+
+    <button id="buttonOne">Button One</button>
+    <button id="buttonTwo">Button Two</button>
+    <button id="buttonThree">Button Three</button>
+
+    <script>
+
+        function One(){
+            alert("Button 1 was clicked!");
+        }
+        function Two(){
+            alert("Button 2 was clicked!");
+        }
+        function Three(){
+            alert("Button 3 was clicked!");
+        }
+
+        document.getElementById("buttonOne").addEventListener("click", One);
+        document.getElementById("buttonTwo").addEventListener("click", Two);
+        document.getElementById("buttonThree").addEventListener("click", Three);
+    </script>
+</body>
+</html>
